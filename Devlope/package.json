@@ -1,15 +1,15 @@
 {
-  "dependencies": {
-    "inquirer": "^8.2.4"
-  },
-  "name": "readme-generator",
-  "description": "09 Challenge",
+  "name": "devlope",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
