@@ -5,15 +5,15 @@ function renderLicenseBadge(license) {
     return '';
   }
   else {
-    const str = license.license.replace(' ', '_')
-    return `[![License: ${license}](https://img.shields.io/badge/License-${str}-blue.svg)](https://opensource.org/licenses/${license.key})`
+    const str = license.key.replace('-', '_');
+    return `[![License: ${license.license}](https://img.shields.io/badge/License-${str}-grey.svg)](https://opensource.org/licenses/${license.key})`
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === `None`) {
+  if (license.license === `None`) {
     return '';
   }
   else {

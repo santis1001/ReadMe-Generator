@@ -15,17 +15,17 @@ npm init -y
 ```
 
 ## Usage
-Open the terminal and run the command `node index.js` and enter the values corresponding to the prompt
+Open the terminal and run the command node index.js and enter the values corresponding to the prompt
 ## License
-[![License:](https://img.shields.io/badge/License-BSD_2-blue.svg)](https://opensource.org/licenses/bsd-2-clause)
+[![License: Boost Software License 1.0](https://img.shields.io/badge/License-bsl_1.0-grey.svg)](https://opensource.org/licenses/bsl-1.0)
 
-Using [BSD 2-clause "Simplified" license](https://opensource.org/licenses/bsd-2-clause)
+Using [Boost Software License 1.0](https://opensource.org/licenses/bsl-1.0)
 
 ## Contribution
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+
 
 ## Test
-  Open the terminal and run the command `node index.js` and enter the values corresponding to the prompt
+Open the terminal and run the command node index.js and enter the values corresponding to the prompt
 
 ## Questions
 For questions regarding the functionality

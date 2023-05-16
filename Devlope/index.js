@@ -55,10 +55,9 @@ const questions = [
         message: 'Describe the test steps'        
     },
     {
-        type: 'list',
+        type: 'input',
         name: 'Contributing',
-        message: 'Accept Contributions?',
-        choices: ['Yes', 'No'],
+        message: 'Enter your Contribution Policy'        
     }
 ];
 
