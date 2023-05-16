@@ -5,8 +5,8 @@ function renderLicenseBadge(license) {
     return '';
   }
   else {
-    const str = license.replace(' ','_')
-    return `[![License: ${license}](https://img.shields.io/badge/License-${str}-blue.svg)](https://opensource.org/licenses/${license})`
+    const str = license.license.replace(' ', '_')
+    return `[![License: ${license}](https://img.shields.io/badge/License-${str}-blue.svg)](https://opensource.org/licenses/${license.key})`
   }
 }
 
@@ -28,14 +28,13 @@ function renderLicenseSection(license) {
     return '';
   }
   else {
-    return `${renderLicenseBadge(license.key)}\n
-    Using ${renderLicenseLink(license)}`;
+    return `${renderLicenseBadge(license)}\n\nUsing ${renderLicenseLink(license)}`;
   }
 }
 function AddContribution(params) {
-  if(params =='Yes'){
+  if (params == 'Yes') {
     return `[Contribution guidelines for this project](docs/CONTRIBUTING.md)`
-  }else{
+  } else {
     return '';
   }
 }
@@ -56,37 +55,37 @@ function generateMarkdown(data) {
   // console.log(licenseSelected);
 
   return `# ${data.Title}
-  ## Description
-  ${data.Description}
+## Description
+${data.Description}
 
-  ## Table of Content
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License Information](#License)
-  - [Contribution](#contribution)
-  - [Test](#test)
-  - [Questions](#questions)
-  ## Installation
-  \`\`\`
-  ${data.Installation}
-  \`\`\`
+## Table of Content
+- [Installation](#installation)
+- [Usage](#usage)
+- [License Information](#License)
+- [Contribution](#contribution)
+- [Test](#test)
+- [Questions](#questions)
+## Installation
+\`\`\`
+${data.Installation}
+\`\`\`
 
-  ## Usage
-  ${data.Usage}
-  ## License
-  ${renderLicenseSection(licenseSelected)}
-  
-  ## Contribution
-  ${AddContribution(data.Contributing)}
+## Usage
+${data.Usage}
+## License
+${renderLicenseSection(licenseSelected)}
 
-  ## Test
-  ${data.Test}
+## Contribution
+${AddContribution(data.Contributing)}
 
-  ## Questions
-  For questions regarding the functionality
-  Contact me at: 
-  * Github: [${data.username}](https://github.com/${data.username})
-  * Email: ${data.Email}
+## Test
+${data.Test}
+
+## Questions
+For questions regarding the functionality
+Contact me at: 
+* Github: [${data.username}](https://github.com/${data.username})
+* Email: ${data.Email}
 
 `;
 }
