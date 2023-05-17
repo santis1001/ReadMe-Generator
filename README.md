@@ -4,7 +4,6 @@
 This application can quickly create and structure a professional README.md file from command-line prompts and inputting characteristics from your project. 
 The project requires `inquirer` and `node`.
 
-
 ## User Story
 ```
 AS A developer
