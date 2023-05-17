@@ -1,5 +1,10 @@
 # ReadMe-Generator
 09 Challenge
+## Description
+This application can quickly create and structure a professional README.md file from command-line prompts and inputting characteristics from your project. 
+The project requires `inquirer` and `node`.
+
+
 ## User Story
 ```
 AS A developer
@@ -24,3 +29,67 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
+## Code Snippets
+### Overall functionality
+The main function uses the inquirer package to prompt the user with a series of questions defined in the questions object array. The inquirer.prompt() method returns a promise that resolves with the user's answers. Which then the answers are sent as parameters to 
+```js
+function init() {
+    return inquirer.prompt(questions).then((answers) => {
+        const readme = generateMarkdown(answers);
+        writeToFile('./README.md',readme);
+    });
+}
+init();
+```
+`generateMarkdown()` Function
+In this function method the answers are recieved and formated to create the ReadMe.md structure.
+```js
+function generateMarkdown(data) {
+  // const index = data.License.findIndex(item => item === lcs);
+  const licenseNameToFind = "Apache license 2.0";
+
+  const index = lcs.findIndex(item => item.license === data.License);
+
+  const licenseSelected = lcs[index];
+
+  // console.log(licenseSelected);
+
+  return `# ${data.Title}
+## Description
+${data.Description}
+
+## Table of Content
+- [Installation](#installation)
+- [Usage](#usage)
+- [License Information](#License)
+- [Contribution](#contribution)
+- [Test](#test)
+- [Questions](#questions)
+## Installation
+\`\`\`
+${data.Installation}
+\`\`\`
+
+## Usage
+${data.Usage}
+## License
+${renderLicenseSection(licenseSelected)}
+
+${AddContribution(data.Contributing)}
+
+## Test
+${data.Test}
+
+## Questions
+For questions regarding the functionality
+Contact me at: 
+* Github: [${data.username}](https://github.com/${data.username})
+* Email: ${data.Email}
+
+`;
+}
+```
+## Screenshots
+![Command Promts](./assets/screenshots/Terminal_prompt.JPG)
+![Readme Sample](./assets/screenshots/ReadmeSS.JPG)
+## Video

@@ -15,17 +15,18 @@ npm init -y
 ```
 
 ## Usage
-Open the terminal and run the command node index.js and enter the values corresponding to the prompt
+Open the terminal and run the command `node index.js` and enter the values corresponding to the prompt
 ## License
-[![License: Boost Software License 1.0](https://img.shields.io/badge/License-bsl_1.0-grey.svg)](https://opensource.org/licenses/bsl-1.0)
+[![License: MIT](https://img.shields.io/badge/License-mit-grey.svg)](https://opensource.org/licenses/mit)
 
-Using [Boost Software License 1.0](https://opensource.org/licenses/bsl-1.0)
+Using [MIT](https://opensource.org/licenses/mit)
 
 ## Contribution
 
+Anyone can contribute to the repo
 
 ## Test
-Open the terminal and run the command node index.js and enter the values corresponding to the prompt
+Open the terminal and run the command `node index.js` and enter the values corresponding to the prompt
 
 ## Questions
 For questions regarding the functionality

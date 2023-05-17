@@ -32,8 +32,8 @@ function renderLicenseSection(license) {
   }
 }
 function AddContribution(params) {
-  if (params == 'Yes') {
-    return `[Contribution guidelines for this project](docs/CONTRIBUTING.md)`
+  if (params != '') {
+    return `## Contribution\n\n${params}`
   } else {
     return '';
   }
@@ -75,7 +75,6 @@ ${data.Usage}
 ## License
 ${renderLicenseSection(licenseSelected)}
 
-## Contribution
 ${AddContribution(data.Contributing)}
 
 ## Test
