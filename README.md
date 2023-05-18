@@ -92,3 +92,4 @@ Contact me at:
 ![Command Promts](./assets/screenshots/Terminal_prompt.JPG)
 ![Readme Sample](./assets/screenshots/ReadmeSS.JPG)
 ## Video
+![Video Readme Generation](./assets/video/Readme.gif)
