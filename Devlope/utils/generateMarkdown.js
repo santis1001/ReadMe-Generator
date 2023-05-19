@@ -1,5 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+// uses the selected license Object to make the badge and add a link to the 
+// opensource.org license documentation
 function renderLicenseBadge(license) {
   if (license === `None`) {
     return '';
@@ -12,6 +14,7 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+// Returns the selected license Individual link
 function renderLicenseLink(license) {
   if (license.license === `None`) {
     return '';
@@ -23,6 +26,8 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+// Returns both result of the functions renderLicenseBadge() and renderLicenseLink
+// which results are formatted into what it would be outputed to the readme.md
 function renderLicenseSection(license) {
   if (license === `None`) {
     return '';
@@ -31,6 +36,7 @@ function renderLicenseSection(license) {
     return `${renderLicenseBadge(license)}\n\nUsing ${renderLicenseLink(license)}`;
   }
 }
+// It will add a contribution policy if theres one.
 function AddContribution(params) {
   if (params != '') {
     return `## Contribution\n\n${params}`
@@ -39,19 +45,17 @@ function AddContribution(params) {
   }
 }
 
-
-// TODO: Create a function to generate markdown for README
+// Returns the objecto containing all the license information
+//  Compete Name, and short name
 const getlicenses = require("./licenses");
 const lcs = getlicenses();
 
+// TODO: Create a function to generate markdown for README
+// Gets the selected license from the data which contains all the answers
+// structurize a readme structure and returns it as string to the index.js.
 function generateMarkdown(data) {
-  // const index = data.License.findIndex(item => item === lcs);
-  const licenseNameToFind = "Apache license 2.0";
-
   const index = lcs.findIndex(item => item.license === data.License);
-
   const licenseSelected = lcs[index];
-
   // console.log(licenseSelected);
 
   return `# ${data.Title}

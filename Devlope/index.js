@@ -5,13 +5,12 @@ const getlicenses = require("./utils/licenses");
 
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-function getLicenseNames(jsonData) {
-    return jsonData.map(item => item.license);
-}
-
+// Returns the objecto containing all the license information
+//Compete Name, and short name
 const lcs = getlicenses().map(item => item.license);
 
+// TODO: Create an array of questions for user input
+//Inquirer questions Object Array 
 const questions = [
     {
         type: 'input',
@@ -62,6 +61,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+//Invoke the function and create the readme file using the data from 
+//generateMarkdown() function
 function writeToFile(fileName, data) { 
     return new Promise((resolve, reject) => {
         fs.writeFile(fileName, data, err => {
@@ -81,6 +82,8 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
+// Make the question prompts and send the answers to the generateMarkdown()
+// Function, which will return a string with the readme file body.
 function init() {
     return inquirer.prompt(questions).then((answers) => {
         const readme = generateMarkdown(answers);
