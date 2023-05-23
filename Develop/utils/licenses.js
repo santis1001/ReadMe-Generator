@@ -1,5 +1,3 @@
-
-
 function getlicenses() {
     const Licenses = [
         {

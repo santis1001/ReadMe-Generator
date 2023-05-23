@@ -1,15 +1,14 @@
-// TODO: Include packages needed for this application
+// Require Packages
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
 const getlicenses = require("./utils/licenses");
 
 const fs = require('fs');
 
-// Returns the objecto containing all the license information
-//Compete Name, and short name
+// Returns the object containing all the license information
+// Compete Name, and short name
 const lcs = getlicenses().map(item => item.license);
 
-// TODO: Create an array of questions for user input
 //Inquirer questions Object Array 
 const questions = [
     {
@@ -81,7 +80,6 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
 // Make the question prompts and send the answers to the generateMarkdown()
 // Function, which will return a string with the readme file body.
 function init() {
