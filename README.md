@@ -95,4 +95,4 @@ Contact me at:
 [Readme Generation file](./Develop/README.md)
 
 ## Video
-![Video Readme Generation](./assets/video/Readme.gif)
+![Video Readme Generation](https://1drv.ms/v/s!Asj9JhD05ulbsmRHheetWfNhK4YW?e=TIEhTD)
