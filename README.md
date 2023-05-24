@@ -30,7 +30,7 @@ THEN I am taken to the corresponding section of the README
 ```
 ## Code Snippets
 ### Overall functionality
-The main function uses the inquirer package to prompt the user with a series of questions defined in the questions object array. The inquirer.prompt() method returns a promise that resolves with the user's answers. Which then the answers are sent as parameters to 
+The main function uses the inquirer package to prompt the user with a series of questions defined in the questions object array. The inquirer.prompt() method returns a promise that resolves with the user's answers. Which then the answers are sent as parameters to `generateMarkdown()` function.
 ```js
 function init() {
     return inquirer.prompt(questions).then((answers) => {
@@ -44,15 +44,9 @@ init();
 In this function method the answers are recieved and formated to create the ReadMe.md structure.
 ```js
 function generateMarkdown(data) {
-  // const index = data.License.findIndex(item => item === lcs);
   const licenseNameToFind = "Apache license 2.0";
-
   const index = lcs.findIndex(item => item.license === data.License);
-
   const licenseSelected = lcs[index];
-
-  // console.log(licenseSelected);
-
   return `# ${data.Title}
 ## Description
 ${data.Description}
@@ -95,4 +89,4 @@ Contact me at:
 [Readme Generation file](./Develop/README.md)
 
 ## Video
-![Video Readme Generation](https://1drv.ms/v/s!Asj9JhD05ulbsmRHheetWfNhK4YW?e=TIEhTD)
+[![Video Readme Generation](./assets/video/video_preview.png)](https://1drv.ms/v/s!Asj9JhD05ulbsmRHheetWfNhK4YW?e=TIEhTD)
